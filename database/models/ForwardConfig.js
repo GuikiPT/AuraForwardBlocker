@@ -7,14 +7,14 @@ const ForwardConfig = sequelize.define('ForwardConfig', {
     allowNull: false,
     unique: true,
   },
-  forward_enabled: {
+  forward_automod_enabled: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true,
   },
-  max_forwards_per_message: {
-    type: DataTypes.INTEGER,
-    defaultValue: 5,
+  log_channel_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
 }, {
   tableName: 'forward_config',

@@ -15,7 +15,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     await sequelize.sync({ alter: true });
     console.log('Database models synced successfully.');
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Unable to connect to the database:', error.stack);
   }
 })();
 
