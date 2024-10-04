@@ -7,7 +7,7 @@ module.exports = {
 		.setDescription('Displays the bot\'s current latency.'),
 	async execute(interaction) {
 		try {
-			const reply = await interaction.reply({ content: '<a:DiscordLoading:1278286038372057178>', fetchReply: true });
+			const reply = await interaction.reply({ content: 'https://cdn.discordapp.com/emojis/1278286038372057178.gif?size=80&quality=lossless', fetchReply: true });
 
 			const ping = reply.createdTimestamp - interaction.createdTimestamp;
 
